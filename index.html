@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <input type="text" id="scope" oninput="grade()" style="background-color: black; padding: 10px; box-shadow: inset; color: wheat; text-align: center;">
+    <button onclick="grade()">Grade</button>
+    <p id="comment"></p>
+<br>
+    <table id="table">
+        <input type="text" id="score" style="background-color: black; padding: 10px; box-shadow: inset; color: wheat; text-align: center; width:100%;">
+        <tr>
+            <td>
+         <button onclick="div()">/</button>
+            </td>
+         <td>
+         <button onclick="plus()">+</button>
+        </td>
+         
+          <td>
+         <button onclick="mum()">-</button>
+          </td>
+          <td>
+            <button onclick="clr()">c</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+         <button onclick="nine()">9</button>
+          </td>
+          <td>
+         <button onclick="eight()">8</button>
+          </td>
+          <td>
+         <button onclick="seven()">7</button>
+          </td>
+          <td>
+            <button onclick="zero()">0</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+         <button onclick="six()">6</button>
+          </td>
+          <td>
+         <button onclick="five()">5</button>
+          </td>
+          <td>
+         <button onclick="four()">4</button>
+          </td>
+          <td>
+            <button onclick="mult()">*</button>
+          </td>
+        </tr>
+        <tr>
+            <td>
+         <button onclick="three()">3</button>
+            </td>
+            <td>
+         <button onclick="two()">2</button>
+            </td>
+            <td>
+         <button onclick="one()">1</button>
+            </td>
+            <td>
+                <button onclick="equal()">=</button>
+            </td>
+        </tr>
+      </table>
+   </div>
+        
+
+    <script>
+
+function one(){
+            document.getElementById('score').value +=1
+        }
+        function two(){
+            document.getElementById('score').value +=2
+        }
+        function three(){
+            document.getElementById('score').value +=3
+        }
+        function four(){
+            document.getElementById('score').value +=4
+        }
+        function five(){
+            document.getElementById('score').value +=5
+        }
+        function six(){
+            document.getElementById('score').value +=6
+        }
+        function seven(){
+            document.getElementById('score').value +=7
+        }
+        function eight(){
+        document.getElementById('score').value += 8;
+      }
+      function nine(){
+        document.getElementById('score').value += 9;
+      }
+      function zero(){
+        document.getElementById('score').value += 0;
+      }
+      function equal(){
+        document.getElementById('score').value=eval(document.getElementById('score').value);
+      }
+      function clr(){
+        document.getElementById('score').value=''
+      }
+      function plus(){
+        document.getElementById('score').value+='+'
+      }
+      function mum(){
+        document.getElementById('score').value+='-'
+      }
+      function mult(){
+        document.getElementById('score').value+='*'
+      }
+      function div(){
+        document.getElementById('score').value+='/'
+      }
+
+
+
+
+
+
+
+
+
+
+
+        function grade(){
+            let scope=document.getElementById('scope').value;
+            if (scope>=70 && scope <=89){
+                document.getElementById('comment').innerHTML="A"
+            }
+       else if(scope>=60 && scope <=69){
+                document.getElementById('comment').innerHTML="B"
+            }
+          else  if (scope>=50 && scope <=59){
+                document.getElementById('comment').innerHTML="C"
+            }
+           else if (scope>=40 && scope <=49){
+                document.getElementById('comment').innerHTML="D"
+            }
+            else if (scope>=30 && scope <=39){
+                document.getElementById('comment').innerHTML="F9"
+            }
+            else if (scope >=99){
+                document.getElementById('comment').innerHTML="A+"
+            }
+            }
+
+
+
+
+
+
+
+            
+    </script>
+    
+</body>
+</html>
